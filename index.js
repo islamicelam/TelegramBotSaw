@@ -1,7 +1,9 @@
 
 const TelegramApi = require ('node-telegram-bot-api');
 const {gameOptions, againOptions} = require('./options')
-const token = "6147902399:AAG7PtBoril0L6-ZJPAbJlODCCaB9z_b0u8"
+
+require("dotenv").config()
+const token = process.env.TOKEN
 
 const bot = new TelegramApi (token, {polling: true})
 
